@@ -9,29 +9,35 @@ package:
 
 source:
     fn: {{name}}-{{ version }}.tar.gz
-    url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
     sha256: {{ sha256 }}
 
 build:
-    number: 0
+    number: 1
     script: python setup.py install --single-version-externally-managed --record record.txt
-
-
+    features:
+        - vc9   # [win and py27]
+        - vc14  # [win and py>=35]
 
 requirements:
     build:
+        - toolchain  # [unix]
         - python
         - cython
         - setuptools
     run:
         - python
+        - python-snappy
 
 test:
     requires:
         - nose
-        - flake8
     imports:
         - {{ name }}
+    source_files:
+        - tests
+    commands:
+        - nosetests -v --with-isolation tests
 
 about:
     home: https://github.com/tebeka/{{ name }}
