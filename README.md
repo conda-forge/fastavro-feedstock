@@ -353,7 +353,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@cpcloud](https://github.com/cpcloud/)
 * [@mariusvniekerk](https://github.com/mariusvniekerk/)
 * [@scottbelden](https://github.com/scottbelden/)
 * [@tebeka](https://github.com/tebeka/)
