@@ -1,4 +1,4 @@
-{% set version = "1.9.4" %}
+{% set version = "1.9.5" %}
 
 package:
   name: fastavro
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/f/fastavro/fastavro-{{ version }}.tar.gz
-  sha256: 56b8363e360a1256c94562393dc7f8611f3baf2b3159f64fb2b9c6b87b14e876
+  sha256: 6419ebf45f88132a9945c51fe555d4f10bb97c236288ed01894f957c6f914553
 
 build:
   number: 0
@@ -23,6 +23,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - cython <3
