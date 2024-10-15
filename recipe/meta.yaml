@@ -9,7 +9,7 @@ source:
   sha256: 13e11c6cb28626da85290933027cd419ce3f9ab8e45410ef24ce6b89d20a1f6c
 
 build:
-  number: 0
+  number: 1
   script:
     - export FASTAVRO_USE_CYTHON=1  # [not win]
     - set FASTAVRO_USE_CYTHON=1  # [win]
@@ -26,11 +26,11 @@ requirements:
     - {{ stdlib("c") }}
   host:
     - python
-    - cython <3
+    - cython
     - pip
+    - setuptools
   run:
     - python
-    - pytz
 
 test:
   requires:
@@ -51,3 +51,4 @@ extra:
     - mariusvniekerk
     - scottbelden
     - tebeka
+    - fhoehle
