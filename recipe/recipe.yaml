@@ -13,7 +13,7 @@ source:
   sha256: 3c79502d56cf6b76210032e1c53494ddfbc73c140bccf2ef4092b3f0825323ab
 
 build:
-  number: 1
+  number: 2
   script:
     env:
       FASTAVRO_USE_CYTHON: "1"
