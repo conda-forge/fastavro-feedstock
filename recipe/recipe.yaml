@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fastavro
-  version: "1.13.0"
+  version: "1.13.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 07f872e6da1ecc33c2332a5f5630916fda25a28fb950b2af0fb3fedff6925530
+  sha256: 6f05aa2539bf7a19e9eb3bdaf6580c4d0f082a8230f641eaf9c84e4bcf0e6bc4
 
 build:
   number: 0
